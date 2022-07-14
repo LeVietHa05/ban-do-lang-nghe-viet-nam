@@ -11,6 +11,9 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 // lấy thông tin từ form (req.body)
 app.use(express.urlencoded({ extended: true }));
+//phải serve các file tĩnh như css như thế này thì mới được 
+// app.use('/public', express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 
 //kết nối database
@@ -49,7 +52,7 @@ app.post(
     res.redirect(`/${newVillage._id}`);
   })
 );
-//show làng mới tạo
+//show 1 làng 
 app.get(
   "/:id",
   catchAsync(async (req, res, next) => {

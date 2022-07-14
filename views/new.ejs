@@ -4,15 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('./new-style.ejs'); %> 
     <title>New product</title>
   </head>
   <body>
     <h1>Thêm làng</h1>
     <form action="/" method="POST">
       <label for="name">Tên làng</label>
-      <input type="text" name="name" id="name" placeholder="Tên làng" />
+      <input type="text" name="name" id="name" placeholder="Tên làng" required/>
       <label for="address">địa chỉ</label>
-      <input type="texttext" name="address" id="address" placeholder="Địa chỉ" />
+      <input type="text" name="address" id="address" placeholder="Địa chỉ" required/>
+      <label for="history">Lịch Sử</label>
+      <textarea type="text" name="history" id="history" placeholder="Lịch Sử"></textarea>
+      <label for="founded_date">thời gian hình thành</label>
+      <input type="date" name="founded_date" id="founded_date" placeholder="thời gian hìn thành">
+      <label for="origin">Nguồn gốc, tổ nghề</label>
+      <input type="text" name="origin" id="origin" placeholder="Nguồn gốc, tổ nghề" required/>
+      <label for="golden_era">Giai đoạn nổi bật</label>
+      <textarea type="text" name="golden_era" id="golden_era" placeholder="Giai đoạn nổi bật"></textarea>
+      <label for="product">Sản phẩm</label>
+      <input type="text" name="product" id="product" placeholder="Sản phẩm" required/>
+      <label for="num_working_people">Số người đang hoạt động</label>
+      <input type="number" name="num_working_people" id="num_working_people" placeholder="Số người đang hoạt động" min="0">
       <button>Submit</button>
     </form>
   </body>
