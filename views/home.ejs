@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-</head>
-<body>
-    <h1>this is home page  </h1>
-    <a href="/new">Thêm làng nghề</a>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/09ee6f5eac.js"
+      crossorigin="anonymous"
+    ></script>
+    <%- include('./home-style.ejs'); %> <%- include('./footer-style.ejs'); %>
+  </head>
+  <body>
+    <header>
+      <div class="upper-header">
+        <div class="logo-img"></div>
+        <!-- <img src="https://s3-alpha-sig.figma.com/img/febe/f84d/b185242bc09ae89ef8a2e72aa2ef7802?Expires=1661731200&Signature=XVflibfKZQgT~I36jK2AOhSrEsZm3ofV8m8I1c4ESuZBSqMhg9WCQBhwOwnxIkIeySo4SHmnNMe2GmpmlDo3mso5mh3q7StaestyDfsTUTRpym5X~w51K-jAy5ZXm1WJi5JuVHz2QP8Fk6u6yRKjHdhOg-BltcKYwOKtEqKPxhMDly8W3tbPzAsrU95LjoRAo6UrOKjibUorVL7fBe2hlWQTpme5G7ivkTTM0~Wt~nrAhgXzfGkzK248-AhUj~7vsiDNtyZ9KhBDJ~s7b0Jlr0wWYaLhYa-C4sS7ozjevvkyVF0hX8~6hlD30WxRWLza2aKlENLmtV4chntH-MVrfg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="asc"> -->
+        <div class="search-box">
+          <!-- <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input type="text" placeholder="Search" /> -->
+          <input type="text" placeholder="Search..." />
+          <div class="search"></div>
+        </div>
+      </div>
+      <div class="header-content">
+        <h1 class="pb-20">The Beauty of Vietnamese Villages</h1>
+        <p class="pb-20">
+          Vietnam is one of the most popular and favorite destinations in South
+          East Asia. It is not only because of the beautiful landscape but also
+          the longstanding traditional craft villages. These villages have been
+          well preserved from generations to generations and existed for
+          centuries. Their products have been well known in both domestic and
+          international markets.Vietnamese customs, traditions, and cultures,
+          all can be seen through these products
+        </p>
+        <button>
+          See More
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+      </div>
+    </header>
+    <main></main>
+    <%- include('./footer.ejs'); %>
+  </body>
 </html>

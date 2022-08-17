@@ -3,7 +3,6 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const LangNghe = require("./models/langNghe");
-const ErrorHandle = require("./ErrorHandle");
 
 //rút gọn đường dẫn đến thư mục
 app.set("views", path.join(__dirname, "views"));
@@ -38,10 +37,12 @@ function catchAsync(fn) {
 app.get("/", (req, res) => {
   res.render("home");
 });
-//new page
+
+// new page
 app.get("/new", (req, res) => {
   res.render("new");
 });
+
 // tạo làng mới 
 app.post(
   "/",
@@ -52,14 +53,14 @@ app.post(
     res.redirect(`/${newVillage._id}`);
   })
 );
-//show 1 làng 
+// show 1 làng 
 app.get(
   "/:id",
   catchAsync(async (req, res, next) => {
     const { id } = req.params;
     const village = await LangNghe.findById(id);
     if (!village) {
-      throw new ErrorHandle("Khong tim thay lang nghe, 404");
+      throw new Error("Khong tim thay lang nghe, 404");
     }
     res.render("show", { village });
   })
